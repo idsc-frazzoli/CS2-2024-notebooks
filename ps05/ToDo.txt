@@ -1,0 +1,14 @@
+Morse Code decoder in continues Time Domain
+Translate the on off signal back to Dot and Dash
+and then put it to decrypter and translate back
+to message
+
+
+
+Paolo:
+-solving the issue with exercise 2
+- understanding case study code to implement correct dynamics
+for a case that shows the different performances for the methods
+- explanations for the discretization methods
+- maybe add some plots along the way to make it as
+visually intuative as possible
