@@ -1,0 +1,3 @@
+- Add code to check implemented code against solution code.
+- Create package for solutions.
+- improve part 2 (Modal Analysis) to better show the dynamics of the aircraft.
