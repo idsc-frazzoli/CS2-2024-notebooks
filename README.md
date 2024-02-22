@@ -95,7 +95,8 @@ If you are using VSCode, follow these additional steps to integrate your setup:
 
 
 ## Installation Guide: Google Collab
-All notebooks are available on the [CS2 Google Collab](https://colab.research.google.com/). 
+All notebooks are available on this [CS2 Google Drive folder](https://drive.google.com/drive/folders/13nXGd9DF19sor8taW5ue47GpjFJV13km?usp=drive_link
+). You need to open the files as a new copy with [Google Colab](https://colab.research.google.com/)
 The kernel runs automatically from the browser and no additional installations must be made. 
 
 ## Usage
