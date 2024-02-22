@@ -94,7 +94,7 @@ If you are using VSCode, follow these additional steps to integrate your setup:
 3. Open a notebook file (`.ipynb`), and you should be able to run the cells using the Python kernel you've set up.
 
 
-## Installation Guide: Google Collab
+## Installation Guide: Google Colab
 All notebooks are available on this [CS2 Google Drive folder](https://drive.google.com/drive/folders/13nXGd9DF19sor8taW5ue47GpjFJV13km?usp=drive_link
 ). You need to open the files as a new copy with [Google Colab](https://colab.research.google.com/)
 The kernel runs automatically from the browser and no additional installations must be made. 
