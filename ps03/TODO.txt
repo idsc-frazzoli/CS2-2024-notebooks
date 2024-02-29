@@ -1,3 +1,5 @@
-- Add code to check implemented code against solution code.
-- Create package for solutions.
-- improve part 2 (Modal Analysis) to better show the dynamics of the aircraft.
+- Write unittests
+- Create a separate package for solutions to organize the code.
+✓ Enhance part 2 (Modal Analysis) to better demonstrate the aircraft dynamics.
+- Add more detailed explanations throughout the code.
+- Add images
