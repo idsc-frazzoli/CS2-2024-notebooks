@@ -1,3 +1,0 @@
-- Create a separate package for solutions to organize the code.
-✓ Enhance part 2 (Modal Analysis) to better demonstrate the aircraft dynamics.
-- Add images maybe
