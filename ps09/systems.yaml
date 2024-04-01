@@ -1,0 +1,14 @@
+- name: System 0
+  type: LTI
+  num: [1, 2, 3]
+  den: [4, 5, 6]
+
+- name: System 1
+  type: LTI
+  num: [7, 8, 9]
+  den: [10, 11, 12]
+
+- name: System 2
+  type: LTI
+  num: [13, 14, 15]
+  den: [16, 17, 18]
