@@ -1,5 +1,6 @@
 from pathlib import Path
 import fitz
+import glob
 def pdf_to_png(file_name: str) -> None:
     parent_path = Path(__file__).resolve().parent
     file_path = parent_path /f"{file_name}.pdf"
@@ -11,4 +12,4 @@ def pdf_to_png(file_name: str) -> None:
         pix = page.get_pixmap(matrix=magnify)
         pix.save(parent_path/f"{file_name}_{page.number}.png")
 
-pdf_to_png("sample")
+pdf_to_png("block_diagram")

@@ -14,10 +14,10 @@
 ]
 \node [input](input){};
 \node [sum, right=of input] (sum) {};
-\node [block, right=of sum] (controller) {Controller};
-\node [block, right=of controller] (system) {System};
+\node [block, right=of sum] (controller) {$P_7$};
+\node [block, right=of controller] (system) {$P_1$};
 \node [output, right= 2cm of system] (output) {};
-\node [block, below left= 1cm and 1cm of system] (feedback) {Feedback};
+\node [block, below left= 1cm and 1cm of system] (feedback) {$P_2$};
 \node [sum, right= 3.5 cm of feedback] (sum2) {};
 \node [input, right= 0.5cm of sum2](input2){};
 
@@ -28,7 +28,7 @@
 \draw (system) -- node [pos=0.8] {$y(t)$} (output);
 \draw [->] (system) -| (sum2) node[pos=0.95, left] {$+$};
 \draw [->] (feedback) -| node[pos=0.99, right] {$-$} (sum);
-\draw [->] (input2) -- node[right= 0.2cm of input]{$u_2(t)$} (sum2);
+\draw [->] (input2) -- node[right= 0.2cm of input]{$n(t)$} (sum2);
 \draw (input2) -- node[below,pos=0.8]{$+$} (sum2);
 \draw [->] (sum2) -- (feedback);
 
