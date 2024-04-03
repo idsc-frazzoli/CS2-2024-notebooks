@@ -1,13 +1,20 @@
 """This module contains functions to access the system library.
 If you want to use this module in your jupyter notebook, you need to
 install the pyyaml package. You can do this by running the following
-command in your terminal: %pip install pyyaml."""
+command in your terminal: %pip install pyyaml. Also dont forget to add it into 
+the imports of the notebook like this: 
+´´´python
+import sys
+sys.path.append("/CS2-2024-notebooks")
+from utils.library_tools import ... (the function you want to use)
+´´´
+"""
 
 import yaml
 import control as ct
 from pathlib import Path
 
-system_library = Path(__file__).parent / "systems" / "systems.yaml"
+system_library = Path(__file__).parent / "system_library" / "systems.yaml"
 
 
 def library_tf_SISO(system: int) -> tuple[ct.TransferFunction, str]:
