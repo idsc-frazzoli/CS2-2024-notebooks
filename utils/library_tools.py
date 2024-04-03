@@ -4,9 +4,10 @@ install the pyyaml package. You can do this by running the following
 command in your terminal: %pip install pyyaml. Also dont forget to add it into 
 the imports of the notebook like this: 
 ´´´python
+import os
 import sys
-sys.path.append("/CS2-2024-notebooks")
-from utils.library_tools import ... (the function you want to use)
+sys.path.append(os.path.join(os.getcwd().strip("YOUR PROBLEM SET"), 'utils/'))
+from library_tools import library_tf_SISO
 ´´´
 """
 
