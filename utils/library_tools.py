@@ -7,7 +7,7 @@ the imports of the notebook like this:
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd().strip("YOUR PROBLEM SET"), 'utils/'))
-from library_tools import library_tf_SISO
+from library_tools import ...
 ´´´
 """
 
