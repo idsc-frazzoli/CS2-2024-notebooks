@@ -37,5 +37,33 @@
         
     \end{tikzpicture}
 \end{frame}
-    
+\begin{frame}
+    \frametitle{Block Diagram}
+    \vspace{0.25cm}
+    \begin{tikzpicture}[auto, node distance=2cm,>=Latex,
+        input/.style = {coordinate},
+        output/.style = {coordinate},
+        block/.style = {draw, rectangle, minimum height=1cm, minimum width=2cm},
+        sum/.style = {draw, circle, node distance=1cm, label=center:$+$, minimum size=0.5cm},
+        ]
+        \node [input](input){};
+        \node [sum, right=of input] (sum) {};
+        \node [block, right= 1.5 of sum] (controller) {$C$};
+        \node [block, right= 1.5of controller] (system) {$P$};
+        \node [output, right= 2cm of system] (output) {};
+        \node [block, below left= 1cm and 1cm of system] (feedback) {$K$};
+        \node [sum, right= 3.5 cm of feedback] (sum2) {};
+        \node [input, right= 0.5cm of sum2](input2){};
+        
+        \draw [->] (input) -- node {$w_1(t)$} (sum);
+        \draw [->] (sum) -- node {$e_1(t)$} (controller);
+        \draw [->] (controller) -- node {$u(t)$} (system);
+        \draw [->] (system) -| (sum2) node[pos=0.95, left] {};
+        \draw [->] (feedback) -| node[pos=0.99, right] {} (sum);
+        \draw [->] (input2) -- node[right= 0.2cm of input]{$w_2(t)$} (sum2);
+        \draw (input2) -- node[below,pos=0.8]{} (sum2);
+        \draw [->] (sum2) -- node[above] {$e_2(t)$} (feedback);
+        
+    \end{tikzpicture}
+\end{frame}
 \end{document}
