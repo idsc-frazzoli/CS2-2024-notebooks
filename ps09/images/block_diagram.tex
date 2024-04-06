@@ -48,10 +48,10 @@
         ]
         \node [input](input){};
         \node [sum, right=of input] (sum) {};
-        \node [block, right= 1.5 of sum] (controller) {$C$};
-        \node [block, right= 1.5of controller] (system) {$P$};
+        \node [block, right= 1.5 of sum] (controller) {$P_0$};
+        \node [block, right= 1.5of controller] (system) {$P_1$};
         \node [output, right= 2cm of system] (output) {};
-        \node [block, below left= 1cm and 1cm of system] (feedback) {$K$};
+        \node [block, below left= 1cm and 1cm of system] (feedback) {$P_2$};
         \node [sum, right= 3.5 cm of feedback] (sum2) {};
         \node [input, right= 0.5cm of sum2](input2){};
         

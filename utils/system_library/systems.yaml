@@ -1,7 +1,7 @@
 Num/Den SISO:
   - name: System 0
     num: [1, 2, 3]
-    den: [4, 5, 6]
+    den: [0, 1, -1]
 
   - name: System 1
     num: [7, 8, 9]
