@@ -1,15 +1,32 @@
 Num/Den SISO:
   - name: System 0
-    num: [1, 2, 3]
-    den: [0, 1, -1]
+    num: [0, 0, 1]
+    den: [1, 2, 4]
 
   - name: System 1
-    num: [7, 8, 9]
-    den: [10, 11, 12]
+    num: [0, 0, 1]
+    den: [0, 1, 1]
 
   - name: System 2
-    num: [13, 14, 15]
-    den: [16, 17, 18]
+    num: [0, 0, 1]
+    den: [0, 1, -1]
+
+  - name: System 3
+    num: [0, 1, 1]
+    den: [1, 4, 9]
+
+  - name: System 4
+    num: [0, 5, 5]
+    den: [0, 1, 1]
+
+  - name: System 5
+    num: [0, 11, 11]
+    den: [0, 1, -1]
+    
+  - name: System 6
+    num: [2, 0, -2]
+    den: [1, 4, 9]
+
 State Space SISO:
   - name: System 1
     A: [[1, 2], [3, 4]]
