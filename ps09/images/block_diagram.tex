@@ -66,4 +66,40 @@
         
     \end{tikzpicture}
 \end{frame}
+\begin{frame}
+    \scalebox{1.8}[6]{}
+    \frametitle{Block Diagram}{}{}
+    \vspace{0.25cm}
+    \hspace{1cm}
+    \begin{tikzpicture}[auto, node distance=1cm,>=Latex,
+        input/.style = {coordinate},
+        output/.style = {coordinate},
+        split/.style = {coordinate},
+        block/.style = {draw, rectangle, minimum height=0.5cm, minimum width=1cm},
+        sum/.style = {draw, circle, node distance=0.5cm ,minimum size=0.15cm},
+        ]
+        \node [input](input){};
+        \node [sum, right=of input] (sum) {};
+        \node [sum, right= 4cm of sum] (sum2) {};
+        \node [split, right= 0.25cm of sum] (split) {};
+        \node [block, right= 1 of controller] (system) {$P_1$};
+        \node [split, right= 0.25cm of system] (split2) {};
+        \node [output, right= 0.75cm of split2] (output) {};
+        \node [block, above right = 0.5cm and 0.5cm of split] (delta) {$\Delta(s)$};
+        \node [block, right = 0.5cm of delta] (weight) {$W(s)$};
+        \node [block, below left= 0.5cm and 1.5cm of system] (feedback) {$P_2$};
+        
+        \draw [->] (input) -- node {} (sum);
+        \draw [->] (sum) -- node {} (sum2);
+        \draw [->] (split) |- node {} (delta);
+        \draw [->] (delta) -- node {} (weight);
+        \draw [->] (weight) -| node {} (sum2);
+        \draw [->] (sum2) -- node {} (system);
+        \draw [->] (feedback) -| node[pos=0.98, right] {$-$} (sum);
+        \draw [->] (split2) |- node[above] {} (feedback);
+        \draw [->] (system) -- node {} (output);
+    
+        
+    \end{tikzpicture}
+\end{frame}
 \end{document}
