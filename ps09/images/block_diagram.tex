@@ -102,4 +102,30 @@
         
     \end{tikzpicture}
 \end{frame}
+\begin{frame}
+    \frametitle{Block Diagram}
+    \begin{center}
+    \vspace{0.25cm}
+    \begin{tikzpicture}[auto, node distance=2cm,>=Latex,
+        input/.style = {coordinate},
+        output/.style = {coordinate},
+        block/.style = {draw, rectangle, minimum height=1cm, minimum width=2cm},
+        sum/.style = {draw, circle, node distance=1cm, label=center:$+$, minimum size=0.5cm},
+        split/.style = {coordinate},
+        ]
+        \node [input](input){};
+        \node [split, right=of input] (split) {};
+        \node [block, right= 1.5 of split] (controller) {$G(s)$};
+        \node [block, below = 1cm of controller] (system) {$\Delta(s)$};
+        \node [output, right= 1.5cm of system] (output) {};
+        \node [split, right= 1.5 cm of system] (split2) {};
+        
+        \draw [->] (split) -- node {} (controller);
+        \draw [->] (split2) -- (system) node {};
+        \draw [-] (controller) -| node{} (split2);
+        \draw [-] (system) -| node {} (split); 
+        
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
 \end{document}
